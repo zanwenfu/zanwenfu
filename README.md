@@ -27,7 +27,7 @@
 
 I am a Software Engineer and M.S. Computer Science (AI/ML) student at Duke University, focused on building **production-grade, AI-powered systems** with **end-to-end ownership**. My work sits at the intersection of **agentic software architectures, distributed backends, and developer-facing tooling**, where correctness, performance, and reliability matter as much as model capability.
 
-I am the **sole founder and engineer of VYNN AI**, an agentic financial analyst platform built entirely end-to-end, spanning backend services, multi-agent orchestration, real-time market data pipelines, and LLM-driven analysis to deliver actionable investment insights in production. Previously, I designed and built **AutoCodeRover**, an LLM-based autonomous code repair system acquired by SonarSource, integrating agentic reasoning directly into the IDE workflow. Across research and industry, I focus on turning AI ideas into **scalable, observable, and maintainable software systems**.
+I am the **sole founder and engineer of VYNN AI**, an agentic financial analyst platform built entirely end-to-end, spanning backend services, multi-agent orchestration, real-time market data pipelines, and LLM-driven analysis to deliver actionable investment insights in production. Previously, I designed and enhanced **AutoCodeRover**, an LLM-based autonomous code repair system acquired by SonarSource, integrating agentic reasoning directly into the IDE workflow. Across research and industry, I focus on turning AI ideas into **scalable, observable, and maintainable software systems**.
 
 ---
 
