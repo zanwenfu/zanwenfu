@@ -45,7 +45,7 @@ I am the **sole founder and engineer of VYNN AI**, an agentic financial analyst 
 
 ---
 
-### **SonarSource (AutoCodeRover)** — IDE-Integrated Autonomous Program Repair  
+### **Sonar (AutoCodeRover)** — IDE-Integrated Autonomous Program Repair  
 🔗 https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/  
 **Software Engineer**
 
