@@ -25,9 +25,13 @@
 
 ## 👋 About
 
-I am a Software Engineer and M.S. Computer Science (AI/ML) student at Duke University, focused on building **production-grade, AI-powered systems** with **end-to-end ownership**. My work sits at the intersection of **agentic software architectures, distributed backends, and developer-facing tooling**, where correctness, performance, and reliability matter as much as model capability.
+I am a Software Engineer and M.S. Computer Science (AI/ML) student at Duke University, focused on building **production-grade agentic AI systems**—from multi-agent orchestration and LLM tooling to the distributed backends that run them reliably at scale.
 
-I am the **sole founder and engineer of VYNN AI**, an agentic financial analyst platform built entirely end-to-end, spanning backend services, multi-agent orchestration, real-time market data pipelines, and LLM-driven analysis to deliver actionable investment insights in production. Previously, I designed and enhanced **AutoCodeRover**, an LLM-based autonomous code repair system acquired by SonarSource, integrating agentic reasoning directly into the IDE workflow. Across research and industry, I focus on turning AI ideas into **scalable, observable, and maintainable software systems**.
+I am the sole founder and engineer of **VYNN AI** (https://vynnai.com), an agentic financial analyst platform built end-to-end, spanning multi-agent orchestration (LangGraph), real-time market data pipelines, and autonomous LLM-driven analysis deployed in production.
+
+Previously, I designed core components of **AutoCodeRover**, an autonomous code repair system acquired by **Sonar**, integrating agentic reasoning directly into JetBrains IDEs and improving autonomous repair performance to **46% on SWE-bench Verified**. I have also conducted research on **multi-agent LLM frameworks for large-scale medical text mining**, currently under review at **NEJM AI**.
+
+I am interested in building **autonomous AI agents that operate reliably in real-world systems**, with an emphasis on correctness, observability, and production readiness over demo performance.
 
 ---
 
@@ -35,64 +39,44 @@ I am the **sole founder and engineer of VYNN AI**, an agentic financial analyst 
 
 ### **VYNN AI** — Agentic Financial Analyst Platform  
 🔗 https://vynnai.com  
-**Founder & Sole Engineer**
+**Founder & Software Engineer**
 
-- Built and deployed a full-stack, production agentic system for financial analysis and valuation with **end-to-end ownership**
-- Designed multi-agent orchestration using LangGraph and tool-augmented reasoning, enabling autonomous analysis, Self-RAG, and structured report generation
-- Implemented **distributed, async backends** (FastAPI, Redis, MongoDB) with real-time **SSE/WebSocket streaming**
-- Deployed containerized services on cloud infrastructure using Docker and Caddy, supporting CI/CD, persistent storage, and fault tolerance
-- Optimized parallel execution and result caching, **reducing end-to-end latency by 72%** in production
+- Built and deployed an agentic financial analysis platform as sole engineer, orchestrating multi-agent workflows with **LangGraph**, tool-augmented reasoning, and **Model Context Protocol (MCP)** self-retrieval to generate structured long-form financial reports
+- Architected production backends on Hetzner Cloud using **FastAPI (async)**, **Redis**, **MongoDB**, Dockerized services, and **Caddy**, enabling real-time **SSE/WebSocket** streaming and fault-tolerant async job orchestration
+- Designed a full valuation engine supporting financial projections, DCF modeling, sensitivity analysis, and automated HTML/PDF report generation via a **React/TypeScript** dashboard
+- Optimized parallel agent execution with caching and scheduling, **reducing end-to-end analysis latency by 72%** in production
 
 ---
 
-### **Sonar (AutoCodeRover)** — IDE-Integrated Autonomous Program Repair  
+### **AutoCodeRover (Sonar)** — IDE-Integrated Autonomous Program Repair  
 🔗 https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/  
-**Software Engineer**
+**Software Engineer** · *Acquired by Sonar*
 
-- Improved autonomous code repair performance to **46% SWE-bench Verified** and **37% Lite** through algorithmic and systems-level enhancements
-- Built a **JetBrains IDE plugin in Kotlin**, integrating with Sonar tooling for real-time diagnostics and autonomous repair
-- Designed **AST-level Patch Alignment** using GumTree to reconcile LLM-generated patches with live developer edits
-- Implemented a **Self-Repair Agent** with feedback-driven replay loops and structured state tracking
-- Reduced manual debugging effort by ~**40%** through IDE-native agentic workflows
+- Built an end-to-end **JetBrains IDE extension in Kotlin**, integrating SonarLint, PSI inspections, REST APIs, and multithreaded background workers with UI-thread synchronization
+- Designed an **AST-level Patch Alignment** mechanism using **GumTree** to reconcile LLM-generated patches with live developer edits, eliminating structural merge conflicts
+- Implemented a distributed autonomous repair pipeline with build/test failure detection, replay-loop reasoning, and a **Self-Repair Agent** coordinating IDE ↔ backend execution
+- Improved autonomous repair performance to **46% SWE-bench Verified** and **37% Lite** by enhancing agentic self-repair and failure recovery strategies
 
 ---
 
 ### **Multi-Agent LLM Framework for Systematic Reviews** — NUS UROP  
 **AI Researcher**
 
-- Built a scalable multi-agent framework for large-scale citation screening and text mining
-- Evaluated across **150K+ abstracts** from 15 systematic reviews
-- Achieved **99.5% sensitivity** and **87.9% specificity**, with **99.95% NPV**, relative to manual screening baselines
-- Primary contributor to manuscript under review at **NEJM AI (2025)**
+- Developed a multi-agent LLM framework for large-scale citation screening using **Chain-of-Thought**, **PICOS evaluation**, and **LLM-as-a-Judge**, achieving **99.5% sensitivity** and **87.9% specificity** across 15 systematic reviews (~150K abstracts)
+- Led collaboration with medical researchers; primary contributor to manuscript under review at **NEJM AI (2025)** demonstrating scalable agentic automation for medical text mining
 
 ---
 
-## 🏆 Experience Highlights
-
-- **Founder & Software Engineer (Agentic AI)**, VYNN AI
-- **Software Engineer**, Binance — large-scale API testing and reliability
-- **Software Engineer**, AutoCodeRover (acquired by SonarSource)
-- **Graduate Teaching Assistant**, Duke University — Software Delivery & Software Development
-- **AI Researcher**, UROP @ NUS
-- **Web Engineer**, National University of Singapore
-- **Quantum Software Engineer**, Center for Quantum Technologies (Singapore)
-- **Full-Stack Software Engineer**, ST Engineering — real-time systems and CI/CD
-
----
-
-## 🧰 Core Technical Skills
+## 🧰 Core Technical Focus
 
 **Languages**  
-Python, Kotlin, Java, TypeScript/JavaScript, C#, SQL, R
+Python, Kotlin, Java, TypeScript/JavaScript, C#, Swift, SQL, R
 
 **Systems & Backend**  
-Distributed services, async architectures, FastAPI, REST APIs, Docker, Redis, MongoDB, CI/CD, Linux, multithreading & concurrency
+Distributed systems, async architectures, FastAPI, REST APIs, Docker, Redis, MongoDB, CI/CD, Linux, multithreading & concurrency
 
-**AI Systems & Tooling**  
-Agentic workflows, LLM tooling, SWE-bench, Self-RAG, text mining, evaluation pipelines, developer-facing AI systems
-
-**Testing & Reliability**  
-API testing (Postman), web automation (Selenium), load & stress testing (JMeter), end-to-end and regression testing
+**Agentic AI & Tooling**  
+Multi-agent workflows, LLM tooling, SWE-bench, Self-RAG, evaluation pipelines, developer-facing AI systems
 
 ---
 
@@ -103,4 +87,4 @@ API testing (Postman), web automation (Selenium), load & stress testing (JMeter)
 
 ---
 
-<sub>Last updated: Aug 2025</sub>
+<sub>Last updated: Feb 2026</sub>
