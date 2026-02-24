@@ -10,6 +10,9 @@
 </p>
 
 <p align="center">
+  <a href="https://zanwenfu.com">
+    <img alt="Website" src="https://img.shields.io/badge/Website-zanwenfu.com-8A2BE2">
+  </a>
   <a href="mailto:zanwen.fu@duke.edu">
     <img alt="Email" src="https://img.shields.io/badge/Email-zanwen.fu%40duke.edu-red">
   </a>
