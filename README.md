@@ -25,7 +25,7 @@ Currently interested in: agent evaluation harnesses, context engineering for lon
 
 LangGraph supervisor orchestrates 5 specialized agents for end-to-end equity research: data scraping → DCF modeling (6 sector strategies) → news intelligence → report generation — all in under 7 minutes. The hard part wasn't the LLM calls; it was making the numbers trustworthy. The recommendation engine uses a 3-layer architecture: deterministic math (`RecommendationCalculator`) → LLM narrative → regex-based validator that blocks publication if citation coverage drops below 95%. Built a custom 1,293-line Excel formula evaluator so the DCF workbook and downstream JSON stay perfectly consistent without requiring Excel. Nightly CI runs a golden-dataset regression suite across 100 QQQ companies and blocks deployment if valuations drift beyond threshold.
 
-→ [`stock-analyst`](https://github.com/Agentic-Analyst/stock-analyst) (agent backend)
+→ [`stock-analyst`](https://github.com/Agentic-Analyst/stock-analyst) (agent backend) · [`vynnai-web`](https://github.com/Agentic-Analyst/vynnai-web) (platform frontend) · [`api-runner`](https://github.com/Agentic-Analyst/api-runner) (API layer)
 
 ---
 
