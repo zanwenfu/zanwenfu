@@ -1,93 +1,52 @@
-<!-- Profile README for https://github.com/zanwenfu -->
-
 <h1 align="center">Zanwen (Ryan) Fu</h1>
 
 <p align="center">
-  <b>Software Engineer & Founder</b><br/>
-  Agentic Systems • Distributed Backends • AI Developer Tooling
-  <br/>
-  M.S. Computer Science (AI/ML), Duke University
+  <b>ML Engineer · Founder</b><br/>
+  Building agentic systems — from reasoning loops to production backends.<br/>
 </p>
 
 <p align="center">
-  <a href="https://zanwenfu.com">
-    <img alt="Website" src="https://img.shields.io/badge/Website-zanwenfu.com-8A2BE2">
-  </a>
-  <a href="mailto:zanwen.fu@duke.edu">
-    <img alt="Email" src="https://img.shields.io/badge/Email-zanwen.fu%40duke.edu-red">
-  </a>
-  <a href="https://www.linkedin.com/in/zanwenfu">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@zanwenfu-blue?logo=linkedin">
-  </a>
-  <a href="https://github.com/zanwenfu">
-    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-zanwenfu-181717?logo=github&logoColor=white">
-  </a>
+  <a href="https://zanwenfu.com"><img alt="Website" src="https://img.shields.io/badge/zanwenfu.com-8A2BE2"></a>
+  <a href="https://www.linkedin.com/in/zanwenfu"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@zanwenfu-0A66C2?logo=linkedin&logoColor=white"></a>
+  <a href="mailto:zanwen.fu@duke.edu"><img alt="Email" src="https://img.shields.io/badge/Email-zanwen.fu%40duke.edu-EA4335"></a>
 </p>
 
 ---
 
-## 👋 About
+Incoming MLE at **Robinhood** (Agentic AI) · M.S. CS (AI/ML) at **Duke** · B.Comp. CS at **NUS**
 
-I am a Software Engineer and M.S. Computer Science (AI/ML) student at Duke University, focused on building **production-grade agentic AI systems**—from multi-agent orchestration and LLM tooling to the distributed backends that run them reliably at scale.
-
-I am the sole founder and engineer of **VYNN AI** (https://vynnai.com), an agentic financial analyst platform built end-to-end, spanning multi-agent orchestration (LangGraph), real-time market data pipelines, and autonomous LLM-driven analysis deployed in production.
-
-Previously, I designed core components of **AutoCodeRover**, an autonomous code repair system acquired by **Sonar**, integrating agentic reasoning directly into JetBrains IDEs and improving autonomous repair performance to **46% on SWE-bench Verified**. I have also conducted research on **multi-agent LLM frameworks for large-scale medical text mining**, currently under review at **NEJM AI**.
-
-I am interested in building **autonomous AI agents that operate reliably in real-world systems**, with an emphasis on correctness, observability, and production readiness over demo performance.
+Currently interested in: agent harness, context engineering, long-running agent evaluation
 
 ---
 
-## 🚀 Selected Work
+### What I've shipped
 
-### **VYNN AI** — Agentic Financial Analyst Platform  
-🔗 https://vynnai.com  
-**Founder & Software Engineer**
+**[VYNN AI](https://github.com/Agentic-Analyst)** — Agentic financial analyst platform (sole engineer, ~500 users, 50K+ LOC)
 
-- Built and deployed an agentic financial analysis platform as sole engineer, orchestrating multi-agent workflows with **LangGraph**, tool-augmented reasoning, and **Model Context Protocol (MCP)** self-retrieval to generate structured long-form financial reports
-- Architected production backends on Hetzner Cloud using **FastAPI (async)**, **Redis**, **MongoDB**, Dockerized services, and **Caddy**, enabling real-time **SSE/WebSocket** streaming and fault-tolerant async job orchestration
-- Designed a full valuation engine supporting financial projections, DCF modeling, sensitivity analysis, and automated HTML/PDF report generation via a **React/TypeScript** dashboard
-- Optimized parallel agent execution with caching and scheduling, **reducing end-to-end analysis latency by 72%** in production
+LangGraph supervisor orchestrates 5 specialized agents for end-to-end equity research: data scraping → DCF modeling (6 sector strategies) → news intelligence → report generation — all in under 7 minutes. The hard part wasn't the LLM calls; it was making the numbers trustworthy. The recommendation engine uses a 3-layer architecture: deterministic math (`RecommendationCalculator`) → LLM narrative → regex-based validator that blocks publication if citation coverage drops below 95%. Built a custom 1,293-line Excel formula evaluator so the DCF workbook and downstream JSON stay perfectly consistent without requiring Excel. Nightly CI runs a golden-dataset regression suite across 100 QQQ companies and blocks deployment if valuations drift beyond threshold.
+
+→ [`stock-analyst`](https://github.com/Agentic-Analyst/stock-analyst) (agent backend)
 
 ---
 
-### **AutoCodeRover (Sonar)** — IDE-Integrated Autonomous Program Repair  
-🔗 https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/  
-**Software Engineer** · *Acquired by Sonar*
+**[AutoCodeRover](https://github.com/zanwenfu/auto-code-rover)** — Autonomous code repair agent · *Core technology [acquired by Sonar](https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/)*
 
-- Built an end-to-end **JetBrains IDE extension in Kotlin**, integrating SonarLint, PSI inspections, REST APIs, and multithreaded background workers with UI-thread synchronization
-- Designed an **AST-level Patch Alignment** mechanism using **GumTree** to reconcile LLM-generated patches with live developer edits, eliminating structural merge conflicts
-- Implemented a distributed autonomous repair pipeline with build/test failure detection, replay-loop reasoning, and a **Self-Repair Agent** coordinating IDE ↔ backend execution
-- Improved autonomous repair performance to **46% SWE-bench Verified** and **37% Lite** by enhancing agentic self-repair and failure recovery strategies
+Designed the **Self-Fix Agent**: when a patch fails to apply, an LLM-as-a-Judge diagnoses which pipeline stage (Context Retrieval or Patch Generation) caused the failure, generates corrective feedback, and replays from that stage — preserving upstream state via UUID-targeted responses. Also built a **stateful replay mechanism** so developers can inject feedback on any intermediate LLM response and trigger selective re-execution downstream. Result: **51.6% on SWE-bench Verified** (up from 38.4%), 1.8× patch precision over next-best open-source agent.
+
+→ [`auto-code-rover`](https://github.com/zanwenfu/auto-code-rover) (agent backend) · [`Jetbrains-IDE-Plugin`](https://github.com/zanwenfu/Jetbrains-IDE-Plugin) (Kotlin, end-to-end)
 
 ---
 
-### **Multi-Agent LLM Framework for Systematic Reviews** — NUS UROP  
-**AI Researcher**
+**[ACR JetBrains Plugin](https://github.com/zanwenfu/Jetbrains-IDE-Plugin)** — IDE-integrated autonomous repair
 
-- Developed a multi-agent LLM framework for large-scale citation screening using **Chain-of-Thought**, **PICOS evaluation**, and **LLM-as-a-Judge**, achieving **99.5% sensitivity** and **87.9% specificity** across 15 systematic reviews (~150K abstracts)
-- Led collaboration with medical researchers; primary contributor to manuscript under review at **NEJM AI (2025)** demonstrating scalable agentic automation for medical text mining
+Built end-to-end in Kotlin. Three things I'm most proud of: (1) **GumTree 3-way AST merge** — when you've edited code while the agent is patching the same file remotely, the plugin reconciles baseline → your edits → agent's patch at the AST level, not text level. (2) **PSI-based context enrichment** — before sending a task to ACR, the plugin extracts symbol references, cursor history (last 10 positions), and open files to narrow the agent's search scope. (3) **Embedded SonarLint** — runs static analysis locally, then lets you one-click send any issue to ACR for autonomous fixing.
 
 ---
 
-## 🧰 Core Technical Focus
+**[LUMINA](https://github.com/zanwenfu/Agentic-AI-for-Systematic-Reviews)** — Multi-agent citation screening for medical systematic reviews (first author)
 
-**Languages**  
-Python, Kotlin, Java, TypeScript/JavaScript, C#, Swift, SQL, R
-
-**Systems & Backend**  
-Distributed systems, async architectures, FastAPI, REST APIs, Docker, Redis, MongoDB, CI/CD, Linux, multithreading & concurrency
-
-**Agentic AI & Tooling**  
-Multi-agent workflows, LLM tooling, SWE-bench, Self-RAG, evaluation pipelines, developer-facing AI systems
+Four-agent pipeline: classifier triage → PICOS-guided Chain-of-Thought screening → LLM-as-a-Judge reviewer → self-correction agent. Evaluated across 15 SRMAs (~150K citations from BMJ, JAMA, Lancet). **98.2% sensitivity** (10 of 15 at perfect 100%) with 35× fewer missed studies vs. prior baselines, at $0.007/article.
 
 ---
 
-## 📫 Contact
-
-- **Email:** zanwen.fu@duke.edu  
-- **LinkedIn:** https://www.linkedin.com/in/zanwenfu  
-
----
-
-<sub>Last updated: Feb 2026</sub>
+<sub>Last updated: Mar 2026</sub>
