@@ -15,7 +15,7 @@
 
 Incoming MLE at **Robinhood** (Agentic AI) · M.S. CS (AI/ML) at **Duke** · B.Comp. CS at **NUS**
 
-Currently interested in: agent harness, context engineering, long-running agent evaluation
+Currently interested in: agent evaluation harnesses, context engineering for long-running workflows, and what it actually takes to benchmark agents that make real-world decisions over time.
 
 ---
 
@@ -46,6 +46,14 @@ Built end-to-end in Kotlin. Three things I'm most proud of: (1) **GumTree 3-way 
 **[LUMINA](https://github.com/zanwenfu/Agentic-AI-for-Systematic-Reviews)** — Multi-agent citation screening for medical systematic reviews (first author)
 
 Four-agent pipeline: classifier triage → PICOS-guided Chain-of-Thought screening → LLM-as-a-Judge reviewer → self-correction agent. Evaluated across 15 SRMAs (~150K citations from BMJ, JAMA, Lancet). **98.2% sensitivity** (10 of 15 at perfect 100%) with 35× fewer missed studies vs. prior baselines, at $0.007/article.
+
+---
+
+### What I think about
+
+- **Agent harness design** — VYNN's golden-dataset regression suite and ACR's SWE-bench eval loop taught me the same lesson: the harness that catches agent regressions matters more than the agent itself. I'm interested in building eval infrastructure that can score long-running, multi-step agents where "correct" isn't a single number.
+- **Context engineering** — Most agent failures I've debugged trace back to what the agent *didn't know*, not what it reasoned poorly about. PSI-based enrichment in the ACR plugin, MCP self-retrieval in VYNN, 33 externalized prompt templates — these are all different bets on the same problem: giving agents the right context at the right time.
+- **The gap between demo benchmarks and production trust** — An agent that scores 51.6% on SWE-bench still fails half the time. VYNN's 3-layer recommendation validator exists because "usually right" isn't good enough for financial decisions. I'm drawn to the engineering that makes agents trustworthy enough to run unsupervised.
 
 ---
 
