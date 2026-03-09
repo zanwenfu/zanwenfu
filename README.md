@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://zanwenfu.com"><img alt="Website" src="https://img.shields.io/badge/zanwenfu.com-8A2BE2"></a>
+  <a href="https://zanwenfu.com"><img alt="Website" src="https://img.shields.io/badge/Website-zanwenfu.com-8A2BE2"></a>
   <a href="https://www.linkedin.com/in/zanwenfu"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@zanwenfu-0A66C2?logo=linkedin&logoColor=white"></a>
   <a href="mailto:zanwen.fu@duke.edu"><img alt="Email" src="https://img.shields.io/badge/Email-zanwen.fu%40duke.edu-EA4335"></a>
 </p>
