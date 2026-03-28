@@ -33,11 +33,11 @@ LangGraph supervisor orchestrates 5 specialized agents for end-to-end equity res
 
 Designed the **Self-Fix Agent**: when a patch fails to apply, an LLM-as-a-Judge diagnoses which pipeline stage (Context Retrieval or Patch Generation) caused the failure, generates corrective feedback, and replays from that stage — preserving upstream state via UUID-targeted responses. Also built a **stateful replay mechanism** so developers can inject feedback on any intermediate LLM response and trigger selective re-execution downstream. Result: **51.6% on SWE-bench Verified** (up from 38.4%), 1.8× patch precision over next-best open-source agent.
 
-→ [`auto-code-rover`](https://github.com/zanwenfu/auto-code-rover) (agent backend) · [`Jetbrains-IDE-Plugin`](https://github.com/zanwenfu/Jetbrains-IDE-Plugin) (Kotlin, end-to-end)
+→ [`auto-code-rover`](https://github.com/zanwenfu/auto-code-rover) (agent backend) · [`jetbrains-agentic-plugin`](https://github.com/zanwenfu/jetbrains-agentic-plugin) (Kotlin, end-to-end)
 
 ---
 
-**[ACR JetBrains Plugin](https://github.com/zanwenfu/Jetbrains-IDE-Plugin)** — IDE-integrated autonomous repair
+**[ACR JetBrains Plugin](https://github.com/zanwenfu/jetbrains-agentic-plugin)** — IDE-integrated autonomous repair
 
 Built end-to-end in Kotlin. Three things I'm most proud of: (1) **GumTree 3-way AST merge** — when you've edited code while the agent is patching the same file remotely, the plugin reconciles baseline → your edits → agent's patch at the AST level, not text level. (2) **PSI-based context enrichment** — before sending a task to ACR, the plugin extracts symbol references, cursor history (last 10 positions), and open files to narrow the agent's search scope. (3) **Embedded SonarLint** — runs static analysis locally, then lets you one-click send any issue to ACR for autonomous fixing.
 
