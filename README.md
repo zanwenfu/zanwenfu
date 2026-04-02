@@ -35,11 +35,11 @@ Full technical retrospective: **[Building VYNN AI: 50,000 Lines of Code, One Eng
 
 Designed the **Self-Fix Agent**: when a patch fails, an LLM-as-a-Judge diagnoses which pipeline stage caused the failure, generates corrective feedback, and replays from that stage — preserving upstream state via UUID-targeted responses. Built a **stateful replay mechanism** so developers can inject feedback on any intermediate reasoning step and trigger selective re-execution downstream. Result: **51.6% on SWE-bench Verified** (up from 38.4%), 1.8× patch precision over next-best open-source agent. Sonar's [Foundation Agent](https://www.sonarsource.com/blog/introducing-sonar-foundation-agent/), built on the AutoCodeRover core, has since reached **79.2%** — **[#1 on the SWE-bench leaderboard](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/)** (Feb 2026).
 
-I also built the **[JetBrains IDE plugin](https://github.com/zanwenfu/jetbrains-agentic-plugin)** end-to-end in Kotlin to bring ACR into the developer workflow: **GumTree 3-way AST merge** that reconciles your live edits with the agent's patch at the tree-node level (Git diffs lines; GumTree diffs AST nodes, so a renamed variable and an added null-check merge cleanly), **PSI-based context enrichment** that extracts symbol references, cursor history, and open files to narrow the agent's search scope before it starts, and **embedded SonarLint Core 10.3.0** for one-click static analysis → autonomous fix.
+I also built the **[JetBrains IDE plugin](https://github.com/zanwenfu/jetbrains-ide-plugin)** end-to-end in Kotlin to bring ACR into the developer workflow: **GumTree 3-way AST merge** that reconciles your live edits with the agent's patch at the tree-node level (Git diffs lines; GumTree diffs AST nodes, so a renamed variable and an added null-check merge cleanly), **PSI-based context enrichment** that extracts symbol references, cursor history, and open files to narrow the agent's search scope before it starts, and **embedded SonarLint Core 10.3.0** for one-click static analysis → autonomous fix.
 
 Full design process: **[From Research Agent to Acquired Product](https://zanwenfu.com/blog/acr_blog)**
 
-→ [`auto-code-rover`](https://github.com/zanwenfu/auto-code-rover) (agent backend) · [`jetbrains-ide-plugin`](https://github.com/zanwenfu/jetbrains-agentic-plugin) (Kotlin, end-to-end)
+→ [`auto-code-rover`](https://github.com/zanwenfu/auto-code-rover) (agent backend) · [`jetbrains-ide-plugin`](https://github.com/zanwenfu/jetbrains-ide-plugin) (Kotlin, end-to-end)
 
 ---
 
