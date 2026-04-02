@@ -13,7 +13,7 @@
 
 ---
 
-Incoming MLE at **[Robinhood](https://robinhood.com)** (Agentic AI) · M.S. CS (AI/ML) at **Duke** · B.Comp. CS (Hons, Distinction) at **NUS**
+**[Incoming MLE @ Robinhood (Agentic Team)](https://www.linkedin.com/posts/zanwenfu_excited-to-share-that-ill-be-joining-robinhood-activity-7428261017333358592-0lWI?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADcUZ6YBXnSd0HpcjwuknOH59R5whQK73Xc)** · M.S. CS (AI/ML) at **Duke** · B.Comp. CS (Hons, Distinction) at **NUS**
 
 The agent itself is the easy part. The harness that makes it work overnight, unsupervised, and recoverable when it fails is what actually matters. I wrote about this in **[Beyond the Harness: An Operating System for AI Agents](https://zanwenfu.com/blog/agent_harness_blog)** — mapping OS primitives onto multi-agent infrastructure: git worktree as memory, branches as execution contexts, CLI-first tool discovery, and a transparency dashboard that turns every agent decision into an auditable commit.
 
