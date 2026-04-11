@@ -51,8 +51,6 @@ The design decisions that matter: an **incumbent/frontier search model** where o
 
 <!-- TODO: Add results when available, e.g.: "Over N overnight iterations, the agent discovered [technique], reaching X.XX val_bpb — [competitive context]." -->
 
-→ [`autoevolve`](https://github.com/zanwenfu/parameter-golf/tree/main/autoevolve)
-
 ---
 
 **[LUMINA](https://github.com/zanwenfu/Agentic-AI-for-Systematic-Reviews)** — Multi-agent citation screening for medical systematic reviews &nbsp;·&nbsp; first author
