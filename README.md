@@ -21,7 +21,7 @@ The agent itself is the easy part. The harness that makes it work overnight, uns
 
 ### What I've shipped
 
-**[VYNN AI](https://github.com/Agentic-Analyst)** — Agentic financial analyst platform &nbsp;·&nbsp; sole engineer &nbsp;·&nbsp; ~500 users &nbsp;·&nbsp; 50K+ LOC
+**[VYNN AI](https://github.com/Agentic-Analyst)** — Agentic financial analyst platform &nbsp;·&nbsp; sole engineer &nbsp;·&nbsp; Production platform serving 500+ users in beta &nbsp;·&nbsp; 50K+ LOC
 
 LangGraph supervisor orchestrates 5 specialized agents for end-to-end equity research: data scraping → DCF modeling (6 sector strategies) → news intelligence → report generation — all in under 7 minutes. The hard part wasn't the LLM calls; it was making the numbers trustworthy. **Strict semantic-symbolic separation**: the LLM never touches a number. All financial computation is deterministic Python; the LLM writes prose around immutable `FixedNumbers`. The recommendation engine uses a **3-layer trust architecture**: deterministic math (`RecommendationCalculator`) → LLM narrative with citation IDs → regex-based validator that blocks publication if coverage drops below 95%. Built a custom 1,293-line Excel formula evaluator so the DCF workbook and downstream JSON stay perfectly consistent without requiring Excel. Nightly CI runs a **golden-dataset regression suite** across 100 QQQ companies and blocks deployment if valuations drift beyond threshold.
 
