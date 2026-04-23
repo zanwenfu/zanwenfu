@@ -2,81 +2,91 @@
 
 <p align="center">
   <b>ML Engineer · Founder</b><br/>
-  I build agentic AI systems that actually work in the real world —<br/>reliable, observable, and designed to survive production, not just demos.<br/>
+  <a href="https://zanwenfu.com"><b>zanwenfu.com</b></a>
 </p>
 
 <p align="center">
-  <a href="https://zanwenfu.com"><img alt="Website" src="https://img.shields.io/badge/Website-zanwenfu.com-8A2BE2"></a>
-  <a href="https://www.linkedin.com/in/zanwenfu"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@zanwenfu-0A66C2?logo=linkedin&logoColor=white"></a>
-  <a href="mailto:zanwen.fu@duke.edu"><img alt="Email" src="https://img.shields.io/badge/Email-zanwen.fu%40duke.edu-EA4335"></a>
+  <sub>
+    <a href="https://www.linkedin.com/in/zanwenfu">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a>
+  </sub>
+</p>
+
+<p align="center">
+  <sub>
+    Incoming MLE @ <b>Robinhood</b> Central AI · May 2026<br/>
+    MS Computer Science (AI/ML) @ <b>Duke</b> · BComp CS with Distinction @ <b>NUS</b>
+  </sub>
 </p>
 
 ---
 
-**[Incoming MLE @ Robinhood (Agentic Team)](https://www.linkedin.com/posts/zanwenfu_excited-to-share-that-ill-be-joining-robinhood-activity-7428261017333358592-0lWI?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADcUZ6YBXnSd0HpcjwuknOH59R5whQK73Xc)** · M.S. CS (AI/ML) at **Duke** · B.Comp. CS (Hons, Distinction) at **NUS**
+I build agentic AI systems that survive production. The model is the easy part. The **harness** around it — memory, rollback, observability, the architecture between the LLM and the user — is where reliability actually lives.
 
-The agent itself is the easy part. The harness that makes it work overnight, unsupervised, and recoverable when it fails is what actually matters. I wrote about this in **[Beyond the Harness: An Operating System for AI Agents](https://zanwenfu.com/blog/agent_harness_blog)** — mapping OS primitives onto multi-agent infrastructure: git worktree as memory, branches as execution contexts, CLI-first tool discovery, and a transparency dashboard that turns every agent decision into an auditable commit.
-
----
-
-### What I've shipped
-
-**[VYNN AI](https://github.com/Agentic-Analyst)** — Agentic financial analyst platform &nbsp;·&nbsp; sole engineer &nbsp;·&nbsp; Production platform serving 500+ users in beta
-
-LangGraph supervisor orchestrates 5 specialized agents for end-to-end equity research: data scraping → DCF modeling (6 sector strategies) → news intelligence → report generation — all in under 7 minutes. The hard part wasn't the LLM calls; it was making the numbers trustworthy. **Strict semantic-symbolic separation**: the LLM never touches a number. All financial computation is deterministic Python; the LLM writes prose around immutable `FixedNumbers`. The recommendation engine uses a **3-layer trust architecture**: deterministic math (`RecommendationCalculator`) → LLM narrative with citation IDs → regex-based validator that blocks publication if coverage drops below 95%. Built a custom 1,293-line Excel formula evaluator so the DCF workbook and downstream JSON stay perfectly consistent without requiring Excel. Nightly CI runs a **golden-dataset regression suite** across 100 QQQ companies and blocks deployment if valuations drift beyond threshold.
-
-Full technical retrospective: **[Building VYNN AI: 50,000 Lines of Code, One Engineer, and Everything I Learned](https://zanwenfu.com/blog/vynnai_blog)**
-
-→ [`stock-analyst`](https://github.com/Agentic-Analyst/stock-analyst) (agent backend) · [`vynnai-web`](https://github.com/Agentic-Analyst/vynnai-web) (platform frontend) · [`api-runner`](https://github.com/Agentic-Analyst/api-runner) (API layer)
+Most of my work is one argument from three angles: **(1)** production reliability when agents serve real users, **(2)** recovery when an agent's first attempt is wrong, **(3)** infrastructure for agents themselves.
 
 ---
 
-**[AutoCodeRover](https://github.com/zanwenfu/auto-code-rover)** — Autonomous code repair agent &nbsp;·&nbsp; core technology **[acquired by Sonar](https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/)**
+### Three projects
 
-Designed the **Self-Fix Agent**: when a patch fails, an LLM-as-a-Judge diagnoses which pipeline stage caused the failure, generates corrective feedback, and replays from that stage — preserving upstream state via UUID-targeted responses. Built a **stateful replay mechanism** so developers can inject feedback on any intermediate reasoning step and trigger selective re-execution downstream. Result: **51.6% on SWE-bench Verified** (up from 38.4%), 1.8× patch precision over next-best open-source agent. Sonar's [Foundation Agent](https://www.sonarsource.com/blog/introducing-sonar-foundation-agent/), built on the AutoCodeRover core, has since reached **79.2%** — **[#1 on the SWE-bench leaderboard](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/)** (Feb 2026).
+**[VYNN AI](https://github.com/Agentic-Analyst)** &nbsp;·&nbsp; _sole engineer · ~500 pilot users · [vynnai.com](https://vynnai.com)_
 
-I also built the **[JetBrains IDE plugin](https://github.com/zanwenfu/jetbrains-ide-plugin)** end-to-end in Kotlin to bring ACR into the developer workflow: **GumTree 3-way AST merge** that reconciles your live edits with the agent's patch at the tree-node level (Git diffs lines; GumTree diffs AST nodes, so a renamed variable and an added null-check merge cleanly), **PSI-based context enrichment** that extracts symbol references, cursor history, and open files to narrow the agent's search scope before it starts, and **embedded SonarLint Core 10.3.0** for one-click static analysis → autonomous fix.
+Institutional equity research end-to-end in under 7 minutes. LangGraph supervisor orchestrates 7 specialized agents; **the LLM never touches a number**. All financial math is deterministic Python; LLMs produce narrative that a regex validator blocks if citation coverage drops below 95%. A custom 1,293-line Excel formula evaluator keeps the DCF workbook and downstream JSON consistent without requiring Excel at runtime. Reproducibility validated empirically: CV 0.016–0.035 across 9 production runs, paraphrase stability 0.983.
 
-Full design process: **[From Research Agent to Acquired Product](https://zanwenfu.com/blog/acr_blog)**
-
-→ [`auto-code-rover`](https://github.com/zanwenfu/auto-code-rover) (agent backend) · [`jetbrains-ide-plugin`](https://github.com/zanwenfu/jetbrains-ide-plugin) (Kotlin, end-to-end)
+→ [stock-analyst](https://github.com/Agentic-Analyst/stock-analyst) &nbsp;·&nbsp; [api-runner](https://github.com/Agentic-Analyst/api-runner) &nbsp;·&nbsp; [vynnai-web](https://github.com/Agentic-Analyst/vynnai-web) &nbsp;·&nbsp; [blog](https://zanwenfu.com/blog/vynnai_blog)
 
 ---
 
-**[AutoEvolve](https://github.com/zanwenfu/parameter-golf/tree/main/autoevolve)** — Autonomous research agent for [OpenAI's Parameter Golf](https://openai.com/index/parameter-golf/)
+**[AutoCodeRover](https://github.com/zanwenfu/auto-code-rover)** &nbsp;·&nbsp; _[acquired by Sonar](https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/) · ISSTA 2024_
 
-Instead of hand-tuning training scripts for the 16MB model challenge, I built an autonomous research loop — inspired by [Karpathy's autoresearch](https://github.com/karpathy/autoresearch) — that treats GPU hours as a scarce resource and maintains structured scientific memory across experiments. The agent proposes targeted mutations to a single training script, runs bounded experiments on H100, classifies outcomes, and iterates.
+Autonomous code repair agent. I designed the **Self-Fix Agent** — when a patch fails, an LLM-as-a-Judge diagnoses which pipeline stage failed, generates corrective feedback, and replays from that stage while preserving upstream state via UUID-targeted responses. I also built the **JetBrains IDE plugin** end-to-end in Kotlin: GumTree 3-way AST merge, PSI-based context enrichment, embedded SonarLint 10.3.0. AutoCodeRover moved from **38.4% → 51.6% on SWE-bench Verified** during my contribution period; Sonar's [Foundation Agent](https://www.sonarsource.com/blog/introducing-sonar-foundation-agent/), built on the core, reached [**79.2% on Verified**](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/) — top-ranked among autonomous remediation agents as of Feb 2026.
 
-The design decisions that matter: an **incumbent/frontier search model** where only measured improvements replace the current best, but near-misses can open short-lived exploratory branches with bounded follow-on budget. A **structured memory dossier** generated deterministically from git-committed experiment state — organized by proposal family, outcome classification, and timing telemetry — instead of dumping raw logs back into context. A **repeat-family guard** that blocks the agent from re-proposing failed approaches unless it provides a concrete mechanism for why this time is different. Two-stage research strategy: discover plausible ideas under a longer **1×H100 proxy** budget, promote only the strongest to real **8×H100 final validation**. Designed for unattended overnight runs with automatic rollback and per-experiment git commits.
-
-<!-- TODO: Add results when available, e.g.: "Over N overnight iterations, the agent discovered [technique], reaching X.XX val_bpb — [competitive context]." -->
+→ [auto-code-rover](https://github.com/zanwenfu/auto-code-rover) &nbsp;·&nbsp; [jetbrains-ide-plugin](https://github.com/zanwenfu/jetbrains-ide-plugin) &nbsp;·&nbsp; [blog](https://zanwenfu.com/blog/acr_blog)
 
 ---
 
-**[LUMINA](https://github.com/zanwenfu/Agentic-AI-for-Systematic-Reviews)** — Multi-agent citation screening for medical systematic reviews &nbsp;·&nbsp; first author
+**[taste](https://github.com/zanwenfu/taste-is-all-you-need)** &nbsp;·&nbsp; _Agent OS kernel · v0 shipped_
 
-Four-agent pipeline that mirrors the human peer-review process: classifier triage → PICOS-guided Chain-of-Thought screening → LLM-as-a-Judge reviewer → self-correction agent that re-screens when the reviewer and screener disagree. Evaluated across 15 SRMAs (~150K citations from BMJ, JAMA, Lancet). **98.2% sensitivity** (10 of 15 at perfect 100%) with **35× fewer missed studies** vs. prior baselines, at <$0.01/article.
+The implementation of the thesis in [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog). Planner / Worker / Monitor split across three Claude tiers on git as the memory substrate: branches are execution contexts, commits are checkpoints, `git worktree` is process isolation, `git reset --hard` is rollback. Three demos shipped with committed transcripts and full cost telemetry — real-Claude run at **$0.0964 / 43s / 15-of-15 tests green**, parallel worktrees at **~60% wall-clock reduction**, hermetic rollback where a regression is caught by pytest and the session branch stays clean. 40 tests, CI-green, `pip install`-able.
+
+→ [taste-is-all-you-need](https://github.com/zanwenfu/taste-is-all-you-need) &nbsp;·&nbsp; [design thesis](https://zanwenfu.com/blog/agent_harness_blog)
 
 ---
 
-### What I think about
+### Selected research
 
-- **The harness is the bottleneck, not the model.** VYNN's regression suite, ACR's eval loop, and AutoEvolve's memory dossier taught me the same lesson: catching agent failures and learning from them matters more than improving the agent itself. I wrote about what a real agent infrastructure layer should look like — borrowing from OS design — in [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog).
+| | |
+|---|---|
+| **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** | Four-agent citation screening for medical systematic reviews. **0.982 mean sensitivity / 0.018 FNR across 15 SRMAs** (~150K citations). On 4 held-out benchmark SRMAs from Tran et al. 2024 (*Ann Intern Med*), **perfect 1.000 sensitivity with 20–40pp specificity improvements** over their GPT-3.5 PICOS baseline. Sole first author. |
+| **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** | A deterministic downstream calculator absorbs **83% of LLM-layer prompt-injection successes** — and the exact figure (`ρ = 0.83`) is predictable *ex ante* from source code. **6/6 frozen attackability predictions held** on the pilot. Identifies *attack-surface rotation* as a failure mode distinct from Nasr et al. 2025's ASR recovery. System under study: VYNN AI (offline replica). |
+| **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** | Sequoia predicts 1.68× speedup on T4; I measured 0.56×. A four-term decomposition reconciles the 3× gap to **within 1.1% of measurement noise**. The natural A100 optimization (cross-iteration KV persistence) **measurably worsens** T4 — the fourth hidden assumption, surfaced by attempting the optimization. |
+| **[football-llm-scaling](https://github.com/zanwenfu/football-llm-scaling)** | QLoRA appears to beat 5-shot ICL by 7pp on structured match prediction. Under a **coherence-required** metric (label + score + ground truth all agreeing), the advantage disappears: the parser was silently rescuing QLoRA outputs. General taxonomy for detecting parser-rescue on any multi-field benchmark. |
 
-- **Context engineering is the real leverage.** Most agent failures I've debugged trace back to what the agent *didn't know*, not what it reasoned poorly about. PSI-based enrichment in the ACR plugin, blackboard-pattern state sharing in VYNN, AutoEvolve's memory dossier over raw transcripts — all different bets on the same problem: right information, right time, minimum noise.
+---
 
-- **"Usually right" isn't good enough.** VYNN's 3-layer recommendation validator exists because LLMs fabricate financial numbers. ACR's GumTree merge exists because `git apply` fails when code has diverged. AutoEvolve's two-stage proxy→validation exists because GPU hours are finite. I'm drawn to the engineering that makes agents trustworthy enough to run unsupervised.
+### What I've learned
+
+**The harness is the bottleneck, not the model.** When agents fail in production, the infrastructure around the LLM broke — not the LLM itself. [taste](https://github.com/zanwenfu/taste-is-all-you-need) is my attempt at what that infrastructure should look like; [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog) is the argument behind it.
+
+**Context engineering is the real leverage.** Most agent failures I've debugged trace back to what the agent didn't know, not what it reasoned poorly about. The architectural-damping study extends this outward: even what lives *between* the LLM and the user is a context layer, and it can absorb LLM-layer compromise before it reaches anyone.
+
+**"Usually right" isn't good enough.** VYNN's recommendation validator exists because LLMs fabricate financial numbers. ACR's GumTree merge exists because `git apply` fails when code has diverged. The speculative-decoding gap showed a cost model with "usually right" assumptions can predict 1.68× and deliver 0.56× on different hardware. Systems that run unsupervised have to hold on the edge cases, not just the common ones.
 
 ---
 
 ### Writing
 
-| | |
-|---|---|
-| **[Beyond the Harness: An Operating System for AI Agents](https://zanwenfu.com/blog/agent_harness_blog)** | Git worktree as agent memory, CLI-first tool discovery, and why everyone stops at the OS metaphor. |
-| **[From Research Agent to Acquired Product](https://zanwenfu.com/blog/acr_blog)** | AST-level patch merging, interactive feedback loops, and the gap between benchmarks and developer UX. |
-| **[Building VYNN AI](https://zanwenfu.com/blog/vynnai_blog)** | Semantic-symbolic separation, architectural mistakes, and what 500 real users teach you about agent reliability. |
+- **[Beyond the Harness: An Operating System for AI Agents](https://zanwenfu.com/blog/agent_harness_blog)** — Git worktree as agent memory, CLI-first tool discovery, why everyone stops at the OS metaphor.
+- **[From Research Agent to Acquired Product](https://zanwenfu.com/blog/acr_blog)** — AST-level patch merging, interactive feedback loops, the gap between benchmarks and developer UX.
+- **[Building VYNN AI: 50K LOC, One Engineer](https://zanwenfu.com/blog/vynnai_blog)** — Semantic–symbolic separation, architectural mistakes, and what 500 real users teach you about agent reliability.
 
 ---
 
-<sub>Open to full-time SWE & ML engineering roles for 2027. Last updated: Mar 2026</sub>
+<p align="center">
+  <sub>
+    Open to full-time SWE / ML engineering roles starting 2027. If you're building something hard, I'd love to hear about it.<br/>
+    <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a>
+  </sub>
+</p>
+
+<sub><em>Last updated: April 2026</em></sub>
