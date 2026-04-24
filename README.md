@@ -45,7 +45,7 @@ Autonomous code repair agent. I designed the **Self-Fix Agent** — when a patch
 
 ---
 
-**[taste](https://github.com/zanwenfu/taste-is-all-you-need)** &nbsp;·&nbsp; _Agent OS kernel · v0 shipped_
+**[Agent OS](https://github.com/zanwenfu/taste-is-all-you-need)** &nbsp;·&nbsp; _Agent OS kernel · v0 shipped_
 
 The implementation of the thesis in [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog). Planner / Worker / Monitor split across three Claude tiers on git as the memory substrate: branches are execution contexts, commits are checkpoints, `git worktree` is process isolation, `git reset --hard` is rollback. Three demos shipped with committed transcripts and full cost telemetry — real-Claude run at **$0.0964 / 43s / 15-of-15 tests green**, parallel worktrees at **~60% wall-clock reduction**, hermetic rollback where a regression is caught by pytest and the session branch stays clean. 40 tests, CI-green, `pip install`-able.
 
