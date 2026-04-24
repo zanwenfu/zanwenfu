@@ -66,7 +66,7 @@ The implementation of the thesis in [Beyond the Harness](https://zanwenfu.com/bl
 
 ### What I've learned
 
-**The harness is the bottleneck, not the model.** When agents fail in production, the infrastructure around the LLM broke — not the LLM itself. [taste](https://github.com/zanwenfu/taste-is-all-you-need) is my attempt at what that infrastructure should look like; [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog) is the argument behind it.
+**The harness is the bottleneck, not the model.** When agents fail in production, the infrastructure around the LLM broke — not the LLM itself. [Agent OS](https://github.com/zanwenfu/taste-is-all-you-need) is my attempt at what that infrastructure should look like; [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog) is the argument behind it.
 
 **Context engineering is the real leverage.** Most agent failures I've debugged trace back to what the agent didn't know, not what it reasoned poorly about. The architectural-damping study extends this outward: even what lives *between* the LLM and the user is a context layer, and it can absorb LLM-layer compromise before it reaches anyone.
 
