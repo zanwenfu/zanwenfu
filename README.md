@@ -23,8 +23,6 @@
 
 I build agentic AI systems that survive production. The model is the easy part. The **harness** around it — memory, rollback, observability, the architecture between the LLM and the user — is where reliability actually lives.
 
-Most of my work is one argument from three angles: **(1)** production reliability when agents serve real users, **(2)** recovery when an agent's first attempt is wrong, **(3)** infrastructure for agents themselves.
-
 ---
 
 ### Three projects
@@ -45,7 +43,7 @@ Autonomous code repair agent. I designed the **Self-Fix Agent** — when a patch
 
 ---
 
-**[Agent OS](https://github.com/zanwenfu/taste-is-all-you-need)** &nbsp;·&nbsp; _Agent OS kernel · v0 shipped_
+**[taste](https://github.com/zanwenfu/taste-is-all-you-need)** &nbsp;·&nbsp; _Agent OS kernel · v0 shipped_
 
 The implementation of the thesis in [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog). Planner / Worker / Monitor split across three Claude tiers on git as the memory substrate: branches are execution contexts, commits are checkpoints, `git worktree` is process isolation, `git reset --hard` is rollback. Three demos shipped with committed transcripts and full cost telemetry — real-Claude run at **$0.0964 / 43s / 15-of-15 tests green**, parallel worktrees at **~60% wall-clock reduction**, hermetic rollback where a regression is caught by pytest and the session branch stays clean. 40 tests, CI-green, `pip install`-able.
 
@@ -53,20 +51,20 @@ The implementation of the thesis in [Beyond the Harness](https://zanwenfu.com/bl
 
 ---
 
-### Selected research
+### Research
 
 | | |
 |---|---|
-| **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** | Four-agent citation screening for medical systematic reviews. **0.982 mean sensitivity / 0.018 FNR across 15 SRMAs** (~150K citations). On 4 held-out benchmark SRMAs from Tran et al. 2024 (*Ann Intern Med*), **perfect 1.000 sensitivity with 20–40pp specificity improvements** over their GPT-3.5 PICOS baseline. Sole first author. |
 | **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** | A deterministic downstream calculator absorbs **83% of LLM-layer prompt-injection successes** — and the exact figure (`ρ = 0.83`) is predictable *ex ante* from source code. **6/6 frozen attackability predictions held** on the pilot. Identifies *attack-surface rotation* as a failure mode distinct from Nasr et al. 2025's ASR recovery. System under study: VYNN AI (offline replica). |
 | **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** | Sequoia predicts 1.68× speedup on T4; I measured 0.56×. A four-term decomposition reconciles the 3× gap to **within 1.1% of measurement noise**. The natural A100 optimization (cross-iteration KV persistence) **measurably worsens** T4 — the fourth hidden assumption, surfaced by attempting the optimization. |
 | **[football-llm](https://github.com/zanwenfu/football-llm) + [scaling study](https://github.com/zanwenfu/football-llm-scaling)** | QLoRA-tuned Llama-3.1 8B on FIFA World Cup prediction (52.3% result acc, 29.7% exact score; anonymized variants beat named ones, ruling out team-name memorization). The follow-up scaling study is the more interesting result: under the standard reporting convention, QLoRA at n=192 beats 5-shot ICL by 12.5pp — but under a **coherence-required metric** (label + score + ground truth all agreeing), **the gap collapses to a tie at 42.2%**. Magnitude/direction decomposition shows the LLM's real edge is in *score magnitude* (19pp pregame on O/U 2.5), driven by pretrained scoreline priors tabular features can't replicate. |
+| **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** | Four-agent citation screening for medical systematic reviews. **0.982 mean sensitivity / 0.018 FNR across 15 SRMAs** (~150K citations). On 4 held-out benchmark SRMAs from Tran et al. 2024 (*Ann Intern Med*), **perfect 1.000 sensitivity with 20–40pp specificity improvements** over their GPT-3.5 PICOS baseline. Sole first author. |
 
 ---
 
-### What I've learned
+### What I think
 
-**The harness is the bottleneck, not the model.** When agents fail in production, the infrastructure around the LLM broke — not the LLM itself. [Agent OS](https://github.com/zanwenfu/taste-is-all-you-need) is my attempt at what that infrastructure should look like; [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog) is the argument behind it.
+**The harness is the bottleneck, not the model.** When agents fail in production, the infrastructure around the LLM broke — not the LLM itself. [taste](https://github.com/zanwenfu/taste-is-all-you-need) is my attempt at what that infrastructure should look like; [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog) is the argument behind it.
 
 **Context engineering is the real leverage.** Most agent failures I've debugged trace back to what the agent didn't know, not what it reasoned poorly about. The architectural-damping study extends this outward: even what lives *between* the LLM and the user is a context layer, and it can absorb LLM-layer compromise before it reaches anyone.
 
