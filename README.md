@@ -14,7 +14,7 @@
 
 <p align="center">
   <sub>
-    MLE @ <b>Robinhood</b> Central AI · May 2026<br/>
+    MLE @ <b>Robinhood</b> Agentic AI · May 2026<br/>
     MS Computer Science (AI/ML) @ <b>Duke</b> · BComp CS with Distinction @ <b>NUS</b>
   </sub>
 </p>
