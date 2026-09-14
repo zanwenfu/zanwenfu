@@ -1,4 +1,4 @@
-<h1 align="center">Zanwen (Ryan) Fu</h1>
+<h1 align="center">Zanwen Fu</h1>
 
 <p align="center">
   <b>ML Engineer · Founder</b><br/>
