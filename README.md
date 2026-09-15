@@ -27,7 +27,7 @@ I build agentic AI systems that survive production. The model is the easy part. 
 
 ### Three projects
 
-**[VYNN AI](https://github.com/Agentic-Analyst)** &nbsp;·&nbsp; _sole engineer · ~1K pilot users · [vynnai.com](https://vynnai.com)_
+**[VYNN AI](https://github.com/Agentic-Analyst)** &nbsp;·&nbsp; _sole engineer · ~5K pilot users · [vynnai.com](https://vynnai.com)_
 
 Institutional equity research end-to-end in under 7 minutes. LangGraph supervisor orchestrates 7 specialized agents; **the LLM never touches a number**. All financial math is deterministic Python; LLMs produce narrative that a regex validator blocks if citation coverage drops below 95%. A custom 1,293-line Excel formula evaluator keeps the DCF workbook and downstream JSON consistent without requiring Excel at runtime. Reproducibility validated empirically: CV 0.016–0.035 across 9 production runs, paraphrase stability 0.983.
 
