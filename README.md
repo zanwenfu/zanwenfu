@@ -65,9 +65,9 @@ AutoCodeRover evolved into the Sonar Foundation Agent, [#1 on the unfiltered SWE
 ### Research
 
 - **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** · first author, [manuscript](https://github.com/zanwenfu/agentic-reviewers-for-SRMA/blob/main/docs/paper/LUMINA_manuscript.pdf). Four-agent citation screener for systematic reviews: 0.982 mean sensitivity and 0.879 specificity across 15 reviews (~150K citations) at $0.007 per citation, and perfect 1.000 sensitivity on the four Tran et al. 2024 benchmark reviews with 20 to 40 point specificity gains over their GPT-3.5 pipeline.
-- **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · Duke ECE 590. The deterministic calculator between VYNN's LLM layer and its users absorbed 83% of successful prompt injections on an offline replica, and that 83% was predicted from the calculator's source before the pilot ran (6 of 6 predictions held).
-- **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** · Duke CS 590. Sequoia's cost model predicts a 1.68x speedup on a T4; measured 0.56x. A four-term decomposition reconciles the gap to within 1.1%, and shows the standard KV-persistence optimization flips sign on T4.
-- **[football-llm-scaling](https://github.com/zanwenfu/football-llm-scaling)** · Duke ECE 590. QLoRA beats 5-shot ICL by 12.5pp under the usual score-overrides-text convention and ties it exactly (42.2%) once a prediction has to be internally coherent. The gap was the metric, not the model.
+- **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · The deterministic calculator between VYNN's LLM layer and its users absorbed 83% of successful prompt injections on an offline replica, and that 83% was predicted from the calculator's source before the pilot ran (6 of 6 predictions held).
+- **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** · Sequoia's cost model predicts a 1.68x speedup on a T4; measured 0.56x. A four-term decomposition reconciles the gap to within 1.1%, and shows the standard KV-persistence optimization flips sign on T4.
+- **[football-llm-scaling](https://github.com/zanwenfu/football-llm-scaling)** · QLoRA beats 5-shot ICL by 12.5pp under the usual score-overrides-text convention and ties it exactly (42.2%) once a prediction has to be internally coherent. The gap was the metric, not the model.
 
 ---
 
@@ -91,7 +91,7 @@ AutoCodeRover evolved into the Sonar Foundation Agent, [#1 on the unfiltered SWE
 
 <p align="center">
   <sub>
-    Looking for a full-time role building agent infrastructure, harnesses, and evals, starting 2027, on a team that ships. If you're building something hard, I'd like to hear about it.<br/>
+    Looking for a full-time role building agent infrastructure, harnesses, and evals, starting 2027, on a team that ships. If you're building something great, I'd like to hear about it.<br/>
     <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a>
   </sub>
 </p>
