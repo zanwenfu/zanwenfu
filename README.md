@@ -1,7 +1,7 @@
 <h1 align="center">Zanwen Fu</h1>
 
 <p align="center">
-  <b>AI engineer shipping production agentic systems</b><br/>
+  <b>Engineer & Founder shipping production agentic systems</b><br/>
   <a href="https://zanwenfu.com"><b>zanwenfu.com</b></a>
 </p>
 
@@ -36,7 +36,7 @@ I build agentic systems that survive production. The model is the easy part. The
 
 The idea: treat git as the operating system for a coding agent. Branches are processes, commits are checkpoints, and rollback is a primitive, so a long-running agent can be paused, inspected, and rewound instead of restarted. A Planner, Workers, and a Monitor run at separate model sizes, so no agent grades its own work.
 
-Early result: in a controlled study against repair-in-place and no-recovery arms, gating rollback on test regression lifted SWE-bench Verified resolve from 55.0% to 63.2% and eliminated all 9 contaminated final states. Ongoing; the argument is in [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog).
+Early result: in a controlled study against repair-in-place and no-recovery arms, gating rollback on test regression lifted SWE-bench Verified resolve from 55.0% to 65.2% and eliminated all 9 contaminated final states. Ongoing; the argument is in [Beyond the Harness](https://zanwenfu.com/blog/agent_harness_blog).
 
 **[Errata-Bench](https://github.com/zanwenfu/errata-bench)** &nbsp;·&nbsp; _self-improving benchmark from real developer corrections · 2026_
 
