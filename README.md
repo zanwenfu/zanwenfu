@@ -1,72 +1,61 @@
-<h1 align="center">Zanwen Fu</h1>
+<a href="https://zanwenfu.com"><img src="./assets/banner.png" alt="Zanwen Fu, founder and engineer. Make something people want. VYNN AI, Robinhood, AutoCodeRover (acquired by Sonar), Binance." width="100%"></a>
 
 <p align="center">
-  <b>Founder &amp; Engineer. I build AI agents people can depend on.</b><br/>
-  <a href="https://zanwenfu.com"><b>zanwenfu.com</b></a>
+  <a href="https://zanwenfu.com"><b>zanwenfu.com</b></a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/zanwenfu">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="https://x.com/zanwenfu">X</a> &nbsp;·&nbsp;
+  <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a>
 </p>
 
-<p align="center">
-  <sub>
-    <a href="https://www.linkedin.com/in/zanwenfu">LinkedIn</a> &nbsp;·&nbsp;
-    <a href="https://x.com/zanwenfu">X</a> &nbsp;·&nbsp;
-    <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a>
-  </sub>
-</p>
+Agents are easy to demo and hard to depend on. I build the ones people depend on.
 
-<p align="center">
-  <sub>
-    Founder, <b>VYNN AI</b> · prev <b>AutoCodeRover</b> (acquired by Sonar), <b>Robinhood</b> Agentic AI, <b>Binance</b> Web3 Wallet<br/>
-    MS Computer Science (AI/ML) @ <b>Duke</b> · BComp CS with Distinction @ <b>NUS</b>
-  </sub>
-</p>
+I founded VYNN AI and built every part of it myself. Before that I was an early employee at AutoCodeRover, one of the first coding agents, which Sonar acquired. I've shipped agentic AI at Robinhood and reliability infrastructure for Binance's Web3 Wallet. What I took from all of it: the model is rarely what decides whether an agent holds up. Everything around it is. That's what I build now.
 
----
+### Building
 
-Agents are easy to demo and hard to depend on. The model is rarely what decides whether one holds up. Everything around it is: memory, rollback, verification, and an honest report of what it actually did. That's what I build.
+**[VYNN AI](https://vynnai.com)**: a personal financial analyst for every investor<br/>
+<sub>Founder and sole engineer · 2025 to now · [how it's built](https://zanwenfu.com/projects/vynn-ai) · [agent code](https://github.com/Agentic-Analyst/stock-analyst)</sub>
 
-### Projects
+Ask about any company, fund, coin or prediction market and get a sourced report and a live Excel model in about two minutes, for about three cents. More than 5,000 investors have signed up, and the first 500 came without a dollar of marketing. The model never writes a number. Code computes every figure, and when VYNN disagrees with Wall Street, it stands by its number and shows you both.
 
-**[VYNN AI](https://vynnai.com)** &nbsp;·&nbsp; _founder and sole engineer · 2025 to now · [agent code](https://github.com/Agentic-Analyst/stock-analyst) · [blog](https://zanwenfu.com/blog/vynnai_blog)_
+**[Agent OS](https://github.com/zanwenfu/taste-is-all-you-need)**: an operating system for AI agents<br/>
+<sub>Creator · 2026 · [how it works](https://zanwenfu.com/projects/agent-os) · [the thesis](https://zanwenfu.com/blog/agent_harness_blog)</sub>
 
-A personal financial analyst for every investor. Ask about any company, fund, coin or prediction market and get a sourced report and a live Excel model in about two minutes. 5K+ users, and the first 500 came with zero marketing spend, from posting raw analyses in investing communities.
+Every team building agents rebuilds the same plumbing: memory, rollback, checks, budgets. Agent OS is the layer underneath them. A central brain plans the work, each piece runs in its own process, and a monitor that can't touch anything signs off. Every step is a commit in git, so nothing unverified ships and nothing is ever lost.
 
-The model never writes a number. A deterministic valuation engine computes every figure, a validator rejects any figure that doesn't match it, and when the valuation methods disagree, VYNN withholds the target instead of picking one. Every release is checked nightly against reference valuations for 100 companies.
+**[Errata-Bench](https://errata-bench.com)**: a self-improving benchmark of whether coding agents tell the truth<br/>
+<sub>Creator · 2026 · [leaderboard](https://errata-bench.com/leaderboard) · [code](https://github.com/zanwenfu/errata-bench) · [dataset](https://huggingface.co/datasets/zanwenfu/errata-bench-v1)</sub>
 
-**[errata-bench](https://errata-bench.com)** &nbsp;·&nbsp; _creator · 2026 · [code](https://github.com/zanwenfu/errata-bench) · [leaderboard](https://errata-bench.com/leaderboard) · [dataset](https://huggingface.co/datasets/zanwenfu/errata-bench-v1)_
+Coding agents end their work with a report, and developers act on it. Errata-Bench checks every claim in that report against what the agent actually did, and it grows from real moments where a developer caught one misreporting. No model was reliably honest: 44–73% of each model's answers claimed something it hadn't established. When an agent left a bug unfixed, 2.5% of its reports said so.
 
-Do coding agents tell the truth about their own work? 55 tasks rebuilt from real moments in [SWE-chat](https://arxiv.org/abs/2604.20779) where a developer caught an agent misreporting. A new model takes the agent's place with working tools, and every claim in its final report is checked against what it actually did.
+### Shipped
 
-In the first run across six models, 44–73% of each model's answers claimed something it hadn't established. When an agent worked on a bug but left it unfixed, 2.5% of its reports said so. The comparison rule was registered before any comparison was computed. A collector has already gathered 4,140 new sessions for the next release.
+**Robinhood**: Agentic AI team<br/>
+<sub>Machine Learning Engineer Intern · 2026 · [Robinhood Cortex](https://robinhood.com/us/en/newsroom/robinhood-presents-yes-no-event/)</sub>
 
-**[Agent OS](https://github.com/zanwenfu/taste-is-all-you-need)** &nbsp;·&nbsp; _creator · 2026 · [design thesis](https://zanwenfu.com/blog/agent_harness_blog)_
+I solo-designed and shipped a proactive agent for Robinhood Cortex that decides when market news deserves a customer's attention, instead of waiting to be asked. It cut false positives five-fold in backtesting with no material event missed and scaled coverage 30× at flat latency. I also caught and fixed a production delivery failure that monitoring had missed.
 
-An operating system for AI agents, with git as its memory. A central brain plans, each piece of work runs as its own process on its own branch, and an observe-only monitor certifies the end state. Only certified work is delivered, and a failed attempt is rolled back but never erased. It already runs real benchmark tasks end to end: 29 trials on errata-bench.
+**[AutoCodeRover](https://github.com/AutoCodeRoverSG/auto-code-rover)**: one of the first coding agents, acquired by Sonar<br/>
+<sub>Early employee · 2024 to 2025 · [IDE plugin](https://github.com/zanwenfu/jetbrains-ide-plugin) · [the story](https://zanwenfu.com/blog/acr_blog)</sub>
 
-**[AutoCodeRover](https://github.com/AutoCodeRoverSG/auto-code-rover)** &nbsp;·&nbsp; _research engineer · 2024 to 2025 · [acquired by Sonar](https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/) · [blog](https://zanwenfu.com/blog/acr_blog)_
-
-One of the first agents to fix real GitHub issues on its own. I worked on the repair backend that reached 51.6% on SWE-bench Verified (Jan 2025), building a Self-Fix loop that diagnoses a failed patch, finds the stage that caused it, and replays from there. I built the [JetBrains plugin](https://github.com/zanwenfu/jetbrains-ide-plugin) end to end in Kotlin, including a three-way merge on the syntax tree so the agent's fix lands on top of the developer's latest edits.
-
-Sonar's Foundation Agent, built on AutoCodeRover's technology, later reached [#1 on the unfiltered SWE-bench leaderboard](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/) (79.2% Verified, Feb 2026).
-
----
+In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I worked on lifting it to 51.6% on SWE-bench Verified and built Self-Fix, which traces a rejected patch back to the step that went wrong. I also built the JetBrains plugin end to end, which merges the agent's fix into the developer's latest code. After Sonar acquired it in 2025, the former AutoCodeRover team's Foundation Agent reached [#1 on SWE-bench's unfiltered leaderboard](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/).
 
 ### Research
 
-- **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** · first author, [manuscript](https://github.com/zanwenfu/agentic-reviewers-for-SRMA/blob/main/docs/paper/LUMINA_manuscript.pdf). Four agents that screen citations for medical systematic reviews: 98.2% sensitivity and 87.9% specificity across 15 published reviews (~150K citations), at under a cent per citation.
-- **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · The deterministic calculator between VYNN's LLM layer and its users absorbed 83% of successful prompt injections on an offline replica, and that figure was predicted from the calculator's source before the pilot ran (6 of 6 predictions held).
-- **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** · Sequoia's cost model predicts a 1.68x speedup on a T4; I measured 0.56x. A four-term decomposition reconciles the gap to within 1.1%.
-- **[football-llm-scaling](https://github.com/zanwenfu/football-llm-scaling)** · QLoRA beats 5-shot prompting by 12.5 points under the usual metric, and ties it exactly (42.2%) once a prediction has to be internally coherent. The gap was the metric, not the model.
+- **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** · first author. Four agents that screen studies for medical systematic reviews: 98.2% sensitivity across 15 published reviews, with 35× fewer missed studies than a published baseline, at under a cent per citation.
+- **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · Prompt injections fooled VYNN's language model every time. In a 12-case pilot, the calculator behind it stopped 10 of them from reaching what users see, and reading its source predicted which ones would get through.
+- **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** · Sequoia's cost model predicts a 1.68× speedup on a T4. I measured 0.56×, and one measured cost explains the gap to within 1.1%.
+- **[football-llm](https://github.com/zanwenfu/football-llm)** · My fine-tuned Llama seemed to beat XGBoost at World Cup predictions. With team names hidden, its exact-score accuracy fell from 43.8% to 10.9%. It had memorized the 2022 tournament.
 
 ### Writing
 
-- **[Beyond the Harness: An Operating System for AI Agents](https://zanwenfu.com/blog/agent_harness_blog)**: git as agent memory, and why everyone stops at the OS metaphor.
-- **[From Research Agent to Acquired Product](https://zanwenfu.com/blog/acr_blog)**: merging agent fixes into live code, and the gap between benchmarks and developer experience.
-- **[Building VYNN AI: 50K LOC, One Engineer](https://zanwenfu.com/blog/vynnai_blog)**: keeping language models away from the numbers, and what real users teach you about reliability.
+- **[Beyond the Harness: An Operating System for AI Agents](https://zanwenfu.com/blog/agent_harness_blog)**: git as an agent's memory, and why everyone stops at the OS metaphor.
+- **[From Research Agent to Acquired Product](https://zanwenfu.com/blog/acr_blog)**: putting a research agent inside the IDE without breaking the developer's flow.
+- **[Building VYNN AI as Its Sole Engineer](https://zanwenfu.com/blog/vynnai_blog)**: keeping language models away from the numbers.
 
 ---
 
 <p align="center">
-  <sub>
-    Making something people want? I'd like to hear about it: <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a>
-  </sub>
+  <sub>Off the keyboard: <a href="https://zanwenfu.com/music">fifteen years of clarinet</a>.<br/>
+  Making something people want? I'd like to hear about it: <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a></sub>
 </p>
