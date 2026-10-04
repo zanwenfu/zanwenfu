@@ -67,6 +67,6 @@ Sonar's Foundation Agent, built on AutoCodeRover's technology, later reached [#1
 
 <p align="center">
   <sub>
-    Building agent infrastructure or evals? I'd like to hear about it: <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a>
+    Making something people want? I'd like to hear about it: <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a>
   </sub>
 </p>
