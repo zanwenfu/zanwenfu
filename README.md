@@ -23,11 +23,6 @@ Ask about any company, fund, coin or prediction market and get a sourced report 
 
 Every team building agents rebuilds the same plumbing: memory, rollback, checks, budgets. Agent OS is the layer underneath them. A central brain plans the work, each piece runs in its own process, and a monitor that can't touch anything signs off. Every step is a commit in git, so nothing unverified ships and nothing is ever lost.
 
-**[Errata-Bench](https://errata-bench.com)**: a self-improving benchmark of whether coding agents tell the truth<br/>
-<sub>Creator · 2026 · [leaderboard](https://errata-bench.com/leaderboard) · [code](https://github.com/zanwenfu/errata-bench) · [dataset](https://huggingface.co/datasets/zanwenfu/errata-bench-v1)</sub>
-
-Coding agents end their work with a report, and developers act on it. Errata-Bench checks every claim in that report against what the agent actually did, and it grows from real moments where a developer caught one misreporting. No model was reliably honest: 44–73% of each model's answers claimed something it hadn't established. When an agent left a bug unfixed, 2.5% of its reports said so.
-
 ### Shipped
 
 **Robinhood**: Agentic AI team<br/>
