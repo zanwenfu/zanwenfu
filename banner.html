@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>banner</title>
+<style>
+  @font-face { font-family: "Geist"; font-weight: 300; src: url("fonts/Geist-Light.woff2") format("woff2"); }
+  @font-face { font-family: "Geist"; font-weight: 400; src: url("fonts/Geist-Regular.woff2") format("woff2"); }
+  @font-face { font-family: "Geist Mono"; font-weight: 400; src: url("fonts/GeistMono-Regular.woff2") format("woff2"); }
+  /* The site's paper and ink; the motto keeps its gold highlight. */
+  :root { --wall: #f7f7f2; --ink: #232722; --fg3: #625e56; --fg4: #706b61; --hl-text: #253b33; --hl: #dfc792; --rule: rgba(28, 26, 23, .2); --frame: #253b33; }
+  /* Dark mode: the banner's forest, as before, with the motto's gold words. */
+  :root[data-theme="dark"] { --wall: #253b33; --ink: #f7f7f2; --fg3: #b5c4ba; --fg4: #c4d0c6; --hl-text: #d6be95; --hl: transparent; --rule: rgba(247, 247, 242, .22); --frame: #6f8a7c; }
+  html, body { margin: 0; background: transparent; }
+  .banner { position: relative; width: 1280px; height: 400px; background: var(--wall); color: var(--ink); font-family: "Geist", sans-serif; overflow: hidden; }
+  canvas { position: absolute; left: 0; top: 0; width: 1280px; height: 400px; }
+  /* A double rule around the strip: the frame colour, then a line of the wall. */
+  .frame { position: absolute; inset: 0; border: 2px solid var(--frame); pointer-events: none; }
+  .frame::after { content: ""; position: absolute; inset: 0; border: 2px solid var(--wall); }
+  .label { position: absolute; top: 40px; left: 64px; font-family: "Geist Mono", monospace; font-size: 15px; letter-spacing: 1.4px; color: var(--fg4); }
+  .name { position: absolute; left: 58px; top: 74px; font-size: 92px; font-weight: 400; letter-spacing: -4.6px; line-height: 1; }
+  .schools { position: absolute; left: 64px; top: 178px; font-size: 19px; letter-spacing: -0.2px; color: var(--fg3); }
+  .motto { position: absolute; left: 64px; top: 216px; font-size: 40px; letter-spacing: -1.4px; line-height: 1; }
+  .motto .light { font-weight: 300; }
+  .motto .hl { position: relative; display: inline-block; isolation: isolate; color: var(--hl-text); }
+  .motto .hl::before { content: ""; position: absolute; z-index: -1; inset: 56% -.025em .015em -.025em; background: var(--hl); clip-path: polygon(0 8%, 100% 0, 99.6% 90%, .2% 100%); }
+  .creds { position: absolute; left: 64px; width: 744px; top: 292px; border-top: 1px solid var(--rule); padding-top: 20px; display: flex; justify-content: space-between; }
+  .cred { display: flex; flex-direction: column; gap: 7px; }
+  .cred b { font-weight: 400; font-size: 21px; letter-spacing: -0.3px; }
+  .cred span { font-size: 15px; color: var(--fg3); }
+  /* Mask pass: only the text, in solid black on nothing, so the scene can keep clear of it. */
+  .mask .banner { background: transparent; }
+  .mask canvas, .mask .frame { display: none; }
+  .mask .banner * { color: #000 !important; border-color: #000 !important; }
+</style></head>
+<body>
+  <div class="banner" id="banner">
+    <canvas id="mosaic" width="2560" height="800"></canvas>
+    <span class="label">FOUNDER &amp; ENGINEER</span>
+    <div class="name">Zanwen Fu</div>
+    <div class="schools">Duke M.S. CS ’27 · NUS B.Comp. CS ’25</div>
+    <div class="motto"><span class="light">Make something </span><span class="hl">people want</span></div>
+    <div class="creds">
+      <div class="cred"><b>VYNN AI</b><span>Founder · 5K+ users</span></div>
+      <div class="cred"><b>Robinhood</b><span>Agentic AI</span></div>
+      <div class="cred"><b>AutoCodeRover</b><span>Acquired by Sonar</span></div>
+      <div class="cred"><b>Binance</b><span>Web3 Wallet</span></div>
+    </div>
+    <div class="frame"></div>
+  </div>
+<script>
+  const q = new URLSearchParams(location.search);
+  if (q.get("theme") === "dark") document.documentElement.dataset.theme = "dark";
+  if (q.get("mask")) document.documentElement.classList.add("mask");
+</script>
+<script src="scene.js"></script>
+</body></html>

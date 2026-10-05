@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "description": "Renders the profile banner: a moving mosaic of sunlight through leaves.",
+  "scripts": { "build": "sh build.sh" },
+  "devDependencies": { "@playwright/test": "1.63.0" }
+}
