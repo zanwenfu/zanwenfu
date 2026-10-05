@@ -1,4 +1,11 @@
-<a href="https://zanwenfu.com"><img src="./assets/banner.png" alt="Zanwen Fu, founder and engineer. Make something people want. VYNN AI, Robinhood, AutoCodeRover (acquired by Sonar), Binance." width="100%"></a>
+<a href="https://zanwenfu.com">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/banner.png">
+  <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="./assets/banner-dark.avif">
+  <source type="image/avif" srcset="./assets/banner.avif">
+  <img src="./assets/banner.png" alt="Zanwen Fu, founder and engineer. Make something people want. VYNN AI, Robinhood, AutoCodeRover (acquired by Sonar), Binance." width="100%">
+</picture>
+</a>
 
 <p align="center">
   <a href="https://zanwenfu.com"><b>zanwenfu.com</b></a> &nbsp;·&nbsp;
