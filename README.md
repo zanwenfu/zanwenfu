@@ -37,7 +37,7 @@ Every team building agents rebuilds the same plumbing: memory, rollback, checks,
 
 I solo-designed and shipped a proactive agent for Robinhood Cortex that decides when market news deserves a customer's attention, instead of waiting to be asked. It cut false positives five-fold in backtesting with no material event missed and scaled coverage 30× at flat latency. I also caught and fixed a production delivery failure that monitoring had missed.
 
-**[AutoCodeRover](https://github.com/AutoCodeRoverSG/auto-code-rover)**: one of the first coding agents, acquired by Sonar<br/>
+**[AutoCodeRover](https://github.com/AutoCodeRoverSG/auto-code-rover)**: one of the first coding agents, [acquired by Sonar](https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/)<br/>
 <sub>Early employee · 2024 to 2025 · [IDE plugin](https://github.com/zanwenfu/jetbrains-ide-plugin) · [the story](https://zanwenfu.com/blog/acr_blog)</sub>
 
 In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I worked on lifting it to 51.6% on SWE-bench Verified and built Self-Fix, which traces a rejected patch back to the step that went wrong. I also built the JetBrains plugin end to end, which merges the agent's fix into the developer's latest code. After Sonar acquired it in 2025, the former AutoCodeRover team's Foundation Agent reached [#1 on SWE-bench's unfiltered leaderboard](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/).
