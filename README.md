@@ -21,7 +21,7 @@ I founded VYNN AI and built every part of it myself. Before that I was an early 
 ### Building
 
 **[VYNN AI](https://vynnai.com)**: a personal financial analyst for every investor<br/>
-<sub>Founder and sole engineer · 2025 to now · [how it's built](https://zanwenfu.com/projects/vynn-ai) · [agent code](https://github.com/Agentic-Analyst/stock-analyst)</sub>
+<sub>Founder and sole engineer · 2025 · [how it's built](https://zanwenfu.com/projects/vynn-ai) · [agent code](https://github.com/Agentic-Analyst/stock-analyst)</sub>
 
 Ask about any company, fund, coin or prediction market and get a sourced report and a live Excel model in about two minutes, for about three cents. More than 5,000 investors have signed up, and the first 500 came without a dollar of marketing. The model never writes a number. Code computes every figure, and when VYNN disagrees with Wall Street, it stands by its number and shows you both.
 
