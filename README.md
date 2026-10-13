@@ -20,11 +20,6 @@ I founded VYNN AI and built every part of it myself. Before that I was an early 
 
 ### Building
 
-**[VYNN AI](https://vynnai.com)**: a personal financial analyst for every investor<br/>
-<sub>Founder and sole engineer · 2025 · [how it's built](https://zanwenfu.com/projects/vynn-ai) · [agent code](https://github.com/Agentic-Analyst/stock-analyst)</sub>
-
-Ask about any company, fund, coin or prediction market and get a sourced report and a live Excel model in about two minutes, for about three cents. More than 5,000 investors have signed up, and the first 500 came without a dollar of marketing. The model never writes a number. Code computes every figure, and when VYNN disagrees with Wall Street, it stands by its number and shows you both.
-
 **[Agent OS](https://github.com/zanwenfu/taste-is-all-you-need)**: an operating system for AI agents<br/>
 <sub>Creator · 2026 · [how it works](https://zanwenfu.com/projects/agent-os) · [the thesis](https://zanwenfu.com/blog/agent_harness_blog)</sub>
 
@@ -36,6 +31,11 @@ Every team building agents rebuilds the same plumbing: memory, rollback, checks,
 <sub>Machine Learning Engineer Intern · 2026 · [Robinhood Cortex](https://robinhood.com/us/en/newsroom/robinhood-presents-yes-no-event/)</sub>
 
 I solo-designed and shipped a proactive agent for Robinhood Cortex that decides when market news deserves a customer's attention, instead of waiting to be asked. It cut false positives five-fold in backtesting with no material event missed and scaled coverage 30× at flat latency. I also caught and fixed a production delivery failure that monitoring had missed.
+
+**[VYNN AI](https://vynnai.com)**: a personal financial analyst for every investor<br/>
+<sub>Founder and sole engineer · 2025 · [how it's built](https://zanwenfu.com/projects/vynn-ai) · [agent code](https://github.com/Agentic-Analyst/stock-analyst)</sub>
+
+Ask about any company, fund, coin or prediction market and get a sourced report and a live Excel model in about two minutes, for about three cents. More than 5,000 investors have signed up, and the first 500 came without a dollar of marketing. The model never writes a number. Code computes every figure, and when VYNN disagrees with Wall Street, it stands by its number and shows you both.
 
 **[AutoCodeRover](https://github.com/AutoCodeRoverSG/auto-code-rover)**: one of the first coding agents, [acquired by Sonar](https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/)<br/>
 <sub>Early employee · 2024 to 2025 · [IDE plugin](https://github.com/zanwenfu/jetbrains-ide-plugin) · [the story](https://zanwenfu.com/blog/acr_blog)</sub>
