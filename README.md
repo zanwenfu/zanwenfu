@@ -33,14 +33,14 @@ Every team building agents rebuilds the same plumbing: memory, rollback, checks,
 I solo-designed and shipped a proactive agent for Robinhood Cortex that decides when market news deserves a customer's attention, instead of waiting to be asked. It cut false positives five-fold in backtesting with no material event missed and scaled coverage 30× at flat latency. I also caught and fixed a production delivery failure that monitoring had missed.
 
 **[VYNN AI](https://vynnai.com)**: a personal financial analyst for every investor<br/>
-<sub>Founder and sole engineer · 2025 · [how it's built](https://zanwenfu.com/projects/vynn-ai) · [agent code](https://github.com/Agentic-Analyst/stock-analyst)</sub>
+<sub>Founder and sole engineer · 2025 · [how it's built](https://zanwenfu.com/projects/vynn-ai) · [against Claude](https://zanwenfu.com/blog/vynn_vs_claude) · [agent code](https://github.com/Agentic-Analyst/stock-analyst)</sub>
 
 Ask about any company, fund, coin or prediction market and get a sourced report and a live Excel model in about two minutes, for about three cents. More than 5,000 investors have signed up, and the first 500 came without a dollar of marketing. The model never writes a number. Code computes every figure, and when VYNN disagrees with Wall Street, it stands by its number and shows you both.
 
 **[AutoCodeRover](https://github.com/AutoCodeRoverSG/auto-code-rover)**: one of the first coding agents, [acquired by Sonar](https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/)<br/>
 <sub>Early employee · 2024 to 2025 · [IDE plugin](https://github.com/zanwenfu/jetbrains-ide-plugin) · [the story](https://zanwenfu.com/blog/acr_blog)</sub>
 
-In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I worked on lifting it to 51.6% on SWE-bench Verified and built Self-Fix, which traces a rejected patch back to the step that went wrong. I also built the JetBrains plugin end to end, which merges the agent's fix into the developer's latest code. After Sonar acquired it in 2025, the former AutoCodeRover team's Foundation Agent reached [#1 on SWE-bench's unfiltered leaderboard](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/).
+In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I worked on lifting it to 51.6% on SWE-bench Verified and built Self-Fix, which, when no patch will apply, finds the agent at fault and reruns from there. I also built the JetBrains plugin end to end, which merges the agent's fix into the developer's latest code. After Sonar acquired it in 2025, the former AutoCodeRover team's Foundation Agent reached [#1 on SWE-bench's unfiltered leaderboard](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/).
 
 ### Research
 
@@ -51,9 +51,11 @@ In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I 
 
 ### Writing
 
-- **[Beyond the Harness: An Operating System for AI Agents](https://zanwenfu.com/blog/agent_harness_blog)**: git as an agent's memory, and why everyone stops at the OS metaphor.
-- **[From Research Agent to Acquired Product](https://zanwenfu.com/blog/acr_blog)**: putting a research agent inside the IDE without breaking the developer's flow.
-- **[Building VYNN AI as Its Sole Engineer](https://zanwenfu.com/blog/vynnai_blog)**: keeping language models away from the numbers.
+- **[VYNN AI Against Claude: Two Races on NVIDIA](https://zanwenfu.com/blog/vynn_vs_claude)**: the same words to both, a model in 38 seconds against 7 min 24 s, and what was inside each.
+- **[VYNN AI, Six Months Later: One Agent for Any Financial Question](https://zanwenfu.com/blog/vynnai_six_months_later)**: from a LangGraph pipeline to one agent with 20 tools, with every number checked.
+- **[An Operating System for AI Agents, with Git as Its Memory](https://zanwenfu.com/blog/agent_harness_blog)**: git as an agent's memory, and why everyone stops at the OS metaphor.
+- **[Taking AutoCodeRover from SWE-bench to the IDE](https://zanwenfu.com/blog/acr_blog)**: putting a research agent inside the IDE without breaking the developer's flow.
+- **[Building VYNN AI Alone: The LLM Never Touches a Number](https://zanwenfu.com/blog/vynnai_blog)**: the first build, what held up, and the decisions I got wrong.
 
 ---
 
