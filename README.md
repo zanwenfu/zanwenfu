@@ -25,6 +25,11 @@ I founded VYNN AI and built every part of it myself. Before that I was an early 
 
 Every team building agents rebuilds the same plumbing: memory, rollback, checks, budgets. Agent OS is the layer underneath them. A central brain plans the work, each piece runs in its own process, and a monitor that can't touch anything signs off. Every step is a commit in git, so nothing unverified ships and nothing is ever lost.
 
+**[Tellwhen](https://tellwhen.app)**: a small tool I built<br/>
+<sub>Creator · 2026 · launching soon</sub>
+
+Tell it what to watch in plain words, and it'll email you the moment it happens.
+
 ### Shipped
 
 **Robinhood**: Agentic AI team<br/>
@@ -44,6 +49,8 @@ In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I 
 
 ### Research
 
+At Duke, with [Prof. Bhuwan Dhingra](https://users.cs.duke.edu/~bdhingra/), my research tests coding agents, and the AI that judges their work, against real developers. Errata-Bench and Simulator Review, a study of AI reviewers, are coming soon.
+
 - **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** · first author. Four agents that screen studies for medical systematic reviews: 98.2% sensitivity across 15 published reviews, with 35× fewer missed studies than a published baseline, at under a cent per citation.
 - **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · Prompt injections fooled VYNN's language model every time. In a 12-case pilot, the calculator behind it stopped 10 of them from reaching what users see, and reading its source predicted which ones would get through.
 - **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** · Sequoia's cost model predicts a 1.68× speedup on a T4. I measured 0.56×, and one measured cost explains the gap to within 1.1%.
@@ -60,6 +67,7 @@ In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I 
 ---
 
 <p align="center">
-  <sub>Off the keyboard: <a href="https://zanwenfu.com/music">fifteen years of clarinet</a>.<br/>
+  <sub>Teaching: TA for Prof. Robert Duvall at Duke, in <a href="https://zanwenfu.com/teaching/all">three software engineering courses</a>.<br/>
+  Off the keyboard: <a href="https://zanwenfu.com/music">fifteen years of clarinet</a>.<br/>
   Making something people want? I'd like to hear about it: <a href="mailto:zanwen.fu@duke.edu">zanwen.fu@duke.edu</a></sub>
 </p>
