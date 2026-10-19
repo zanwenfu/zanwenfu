@@ -43,7 +43,7 @@ I solo-designed and shipped a proactive agent for Robinhood Cortex that decides 
 Ask about any company, fund, coin or prediction market and get a sourced report and a live Excel model in about two minutes, for about three cents. More than 5,000 investors have signed up, and the first 500 came without a dollar of marketing. The model never writes a number. Code computes every figure, and when VYNN disagrees with Wall Street, it stands by its number and shows you both.
 
 **[AutoCodeRover](https://github.com/AutoCodeRoverSG/auto-code-rover)**: one of the first coding agents, [acquired by Sonar](https://www.sonarsource.com/company/press-releases/sonar-acquires-autocoderover-to-supercharge-developers-with-ai-agents/)<br/>
-<sub>Early employee · 2024 to 2025 · [IDE plugin](https://github.com/zanwenfu/jetbrains-ide-plugin) · [the story](https://zanwenfu.com/blog/acr_blog)</sub>
+<sub>Early employee · 2024 to 2025 · advised by [Prof. Abhik Roychoudhury](https://abhikrc.com/) · [IDE plugin](https://github.com/zanwenfu/jetbrains-ide-plugin) · [the story](https://zanwenfu.com/blog/acr_blog)</sub>
 
 In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I worked on lifting it to 51.6% on SWE-bench Verified and built Self-Fix, which, when no patch will apply, finds the agent at fault and reruns from there. I also built the JetBrains plugin end to end, which merges the agent's fix into the developer's latest code. After Sonar acquired it in 2025, the former AutoCodeRover team's Foundation Agent reached [#1 on SWE-bench's unfiltered leaderboard](https://www.sonarsource.com/company/press-releases/sonar-claims-top-spot-on-swe-bench-leaderboard/).
 
