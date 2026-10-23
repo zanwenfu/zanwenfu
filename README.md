@@ -52,9 +52,9 @@ In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I 
 At Duke, with [Prof. Bhuwan Dhingra](https://users.cs.duke.edu/~bdhingra/), my research tests coding agents, and the AI that judges their work, against real developers. Errata-Bench and Simulator Review, a study of AI reviewers, are coming soon.
 
 - **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** · first author. Four agents that screen studies for medical systematic reviews: 98.2% sensitivity across 15 published reviews, with 35× fewer missed studies than a published baseline, at under a cent per citation.
-- **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · Prompt injections fooled VYNN's language model every time. In a 12-case pilot, the calculator behind it stopped 10 of them from reaching what users see, and reading its source predicted which ones would get through.
-- **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** · Sequoia's cost model predicts a 1.68× speedup on a T4. I measured 0.56×, and one measured cost explains the gap to within 1.1%.
-- **[football-llm](https://github.com/zanwenfu/football-llm)** · My fine-tuned Llama seemed to beat XGBoost at World Cup predictions. With team names hidden, its exact-score accuracy fell from 43.8% to 10.9%. It had memorized the 2022 tournament.
+- **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · Prompt injections fooled VYNN's language model every time. In a 12-case pilot, the calculator behind it stopped 10 of them from reaching what users see, and its source shows in advance which scenarios one document can flip.
+- **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** · On a T4, a 1B draft model costs 60% of a 3B call, not the 33% its size suggests, so speculative decoding with a draft model doesn't pay. Only prompt lookup won (1.28–1.39×).
+- **[football-llm-scaling](https://github.com/zanwenfu/football-llm-scaling)** · Fine-tuned Llama 3.1 8B beat 5-shot prompting at World Cup predictions, 61.7% to 49.2%. Counting only answers whose result and score both match the truth, the lead is gone: 42.2% to 41.4%. The usual grading rule was turning its misses into hits.
 
 ### Writing
 
