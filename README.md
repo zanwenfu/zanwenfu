@@ -18,17 +18,17 @@ Agents are easy to demo and hard to depend on. I build the ones people depend on
 
 I founded VYNN AI and built every part of it myself. Before that I was an early employee at AutoCodeRover, one of the first coding agents, which Sonar acquired. I've shipped agentic AI at Robinhood and reliability infrastructure for Binance's Web3 Wallet. What I took from all of it: the model is rarely what decides whether an agent holds up. Everything around it is. That's what I build now.
 
-### Building
+### Now
+
+**[Tellwhen](https://tellwhen.app)**: AI alerts for anything on the web<br/>
+<sub>Creator · 2026 · live · [how it works](https://zanwenfu.com/projects/tellwhen)</sub>
+
+Tell it what to watch in plain words, and it'll email you the moment it happens. It's built and live; now I'm running its evaluations.
 
 **[Agent OS](https://github.com/zanwenfu/taste-is-all-you-need)**: an operating system for AI agents<br/>
 <sub>Creator · 2026 · [how it works](https://zanwenfu.com/projects/agent-os) · [the thesis](https://zanwenfu.com/blog/agent_harness_blog)</sub>
 
 Every team building agents rebuilds the same plumbing: memory, rollback, checks, budgets. Agent OS is the layer underneath them. A central brain plans the work, each piece runs in its own process, and a monitor that can't touch anything signs off. Every step is a commit in git, so nothing unverified ships and nothing is ever lost.
-
-**[Tellwhen](https://tellwhen.app)**: a small tool I built<br/>
-<sub>Creator · 2026 · launching soon</sub>
-
-Tell it what to watch in plain words, and it'll email you the moment it happens.
 
 ### Shipped
 
@@ -52,17 +52,14 @@ In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I 
 At Duke, with [Prof. Bhuwan Dhingra](https://users.cs.duke.edu/~bdhingra/), my research tests coding agents, and the AI that judges their work, against real developers. Errata-Bench and Simulator Review, a study of AI reviewers, are coming soon.
 
 - **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** · first author. Four agents that screen studies for medical systematic reviews: 98.2% sensitivity across 15 published reviews, with 35× fewer missed studies than a published baseline, at under a cent per citation.
-- **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · Prompt injections fooled VYNN's language model every time. In a 12-case pilot, the calculator behind it stopped 10 of them from reaching what users see, and its source shows in advance which scenarios one document can flip.
-- **[speculative-decoding-t4](https://github.com/zanwenfu/speculative-decoding-t4)** · On a T4, a 1B draft model costs 60% of a 3B call, not the 33% its size suggests, so speculative decoding with a draft model doesn't pay. Only prompt lookup won (1.28–1.39×).
-- **[football-llm-scaling](https://github.com/zanwenfu/football-llm-scaling)** · Fine-tuned Llama 3.1 8B beat 5-shot prompting at World Cup predictions, 61.7% to 49.2%. Counting only answers whose result and score both match the truth, the lead is gone: 42.2% to 41.4%. The usual grading rule was turning its misses into hits.
+- **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · in progress. Can poisoned news change what an AI financial agent tells its user? Instruction-style text in 3 of 4 news articles changed the rating in 19 of 100 runs, against 2 of 100 clean; with 1 of 4 poisoned, no more often than clean. [Early results](https://zanwenfu.com/projects/architectural-damping).
+- **[football-llm-scaling](https://github.com/zanwenfu/football-llm-scaling)** · in progress. A fine-tuned Llama beats prompting at predicting World Cup results. Controls show the lead is memory of real 2022 scores: fake scores, unseen 2026 matches and hidden team names each remove it. [Early results](https://zanwenfu.com/projects/football-llm-scaling).
 
 ### Writing
 
 - **[VYNN AI Against Claude: Two Races on NVIDIA](https://zanwenfu.com/blog/vynn_vs_claude)**: the same words to both, a model in 38 seconds against 7 min 24 s, and what was inside each.
-- **[VYNN AI, Six Months Later: One Agent for Any Financial Question](https://zanwenfu.com/blog/vynnai_six_months_later)**: from a LangGraph pipeline to one agent with 20 tools, with every number checked.
 - **[An Operating System for AI Agents, with Git as Its Memory](https://zanwenfu.com/blog/agent_harness_blog)**: git as an agent's memory, and why everyone stops at the OS metaphor.
 - **[Taking AutoCodeRover from SWE-bench to the IDE](https://zanwenfu.com/blog/acr_blog)**: putting a research agent inside the IDE without breaking the developer's flow.
-- **[Building VYNN AI Alone: The LLM Never Touches a Number](https://zanwenfu.com/blog/vynnai_blog)**: the first build, what held up, and the decisions I got wrong.
 
 ---
 
