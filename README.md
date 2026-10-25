@@ -20,8 +20,6 @@ I founded VYNN AI and built every part of it myself. Before that I was an early 
 
 ### Now
 
-**Errata-Bench** · coming soon, from my research at Duke.
-
 **[Tellwhen](https://tellwhen.app)**: AI alerts for anything on the web<br/>
 <sub>Creator · 2026 · live · [how it works](https://zanwenfu.com/projects/tellwhen)</sub>
 
@@ -51,7 +49,7 @@ In 2024, before Claude Code or Codex, it fixed real GitHub issues on its own. I 
 
 ### Research
 
-At Duke, with [Prof. Bhuwan Dhingra](https://users.cs.duke.edu/~bdhingra/), my research tests coding agents, and the AI that judges their work, against real developers. Simulator Review, a study of AI reviewers, is coming soon.
+At Duke, with [Prof. Bhuwan Dhingra](https://users.cs.duke.edu/~bdhingra/), my research tests coding agents, and the AI that judges their work, against real developers. Errata-Bench and Simulator Review, a study of AI reviewers, are coming soon.
 
 - **[LUMINA](https://github.com/zanwenfu/agentic-reviewers-for-SRMA)** · first author. Four agents that screen studies for medical systematic reviews: 98.2% sensitivity across 15 published reviews, with 35× fewer missed studies than a published baseline, at under a cent per citation.
 - **[architectural-damping](https://github.com/zanwenfu/architectural-damping)** · in progress. Can poisoned news change what an AI financial agent tells its user? Instruction-style text in 3 of 4 news articles changed the rating in 19 of 100 runs, against 2 of 100 clean; with 1 of 4 poisoned, no more often than clean. [Early results](https://zanwenfu.com/projects/architectural-damping).
